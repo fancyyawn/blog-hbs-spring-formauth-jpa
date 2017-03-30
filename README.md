@@ -26,3 +26,29 @@ git clone https://github.com/fancyyawn/blog-hbs-spring-formauth-jpa.git
 cd blog-hbs-spring-formauth-jpa
 mvn spring-boot:run
 ```
+## tips
+
+### how to generate the spring boot project by Spring CLI
+
+```sh
+spring init --dependencies web,data-jpa blog/ 
+```
+
+### how to simplify model definition by lombok
+```java
+@Data
+@Accessors(chain = true) 
+public class User implements Serializable {
+    private static final long serialVersionUID = -1575177945061174211L;
+
+    private Long id;
+
+    private String username;
+
+    private String password;
+    
+    public static User mock(){
+        return new User().setId(1L).setUsername('zhacker').setPassword('123456');
+    }
+}
+```
