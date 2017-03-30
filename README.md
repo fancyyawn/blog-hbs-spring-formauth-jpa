@@ -1,4 +1,4 @@
-# simple blog with SpringBoot/SpringMvc/SpringSecurity/hbs/jpa/mysql
+# simple blog with Spring
 
 ## tech stacks
 
